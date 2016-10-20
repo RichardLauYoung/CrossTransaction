@@ -20,5 +20,8 @@
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="package.json" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OKCoinAPI\rest\rest.csproj" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
