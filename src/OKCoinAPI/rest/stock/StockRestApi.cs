@@ -9,7 +9,7 @@ namespace com.okcoin.rest.stock
     /// <summary>
     /// 现货行情，交易 REST API
     /// </summary>
-    class StockRestApi : IStockRestApi
+   public class StockRestApi : IStockRestApi
     {
         /// <summary>
         /// OKCoin申请的secretKey
@@ -161,6 +161,10 @@ namespace com.okcoin.rest.stock
         ///  获取历史交易信息
         /// </summary>
         private const String TRADE_HISTORY_URL = "/api/v1/trade_history.do";
+        /// <summary>
+        ///  大宗交易下单
+        /// </summary>
+        private const String SUBMIT_OTC_ORDER_URL = "/api/v1/submit_otc_order.do";
         /// <summary>
         /// 行情
         /// </summary>
@@ -1040,6 +1044,50 @@ namespace com.okcoin.rest.stock
                 paras.Add("sign", sign);
                 //发送post请求
                 result = httpUtil.requestHttpPost(url_prex, TRADE_HISTORY_URL,
+                        paras);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return result;
+        }
+        /// <summary>
+        /// 大宗交易下单
+        /// </summary>
+        /// <param name="type">buy: 买入, sell: 卖出</param>
+        /// <param name="amount">委托数量</param>
+        /// <param name="price">限定价格</param>
+        /// <param name="open_type">public: 公开交易, private: 私密交易</param>
+        /// <returns></returns>
+        public String submit_otc_order(string symbol, string type, string amount, string price, string open_type)
+        {
+            String result = "";
+            try
+            {
+                HttpUtilManager httpUtil = HttpUtilManager.getInstance();
+                Dictionary<String, String> paras = new Dictionary<String, String>();
+                paras.Add("api_key", api_key);
+                if (!StringUtil.isEmpty(type))
+                {
+                    paras.Add("type", type);
+                }
+                if (!StringUtil.isEmpty(amount))
+                {
+                    paras.Add("amount", amount);
+                }
+                if (!StringUtil.isEmpty(price))
+                {
+                    paras.Add("price", price);
+                }
+                if (!StringUtil.isEmpty(open_type))
+                {
+                    paras.Add("open_type", open_type);
+                }
+                String sign = MD5Util.buildMysignV1(paras, this.secret_key);
+                paras.Add("sign", sign);
+                //发送post请求
+                result = httpUtil.requestHttpPost(url_prex, SUBMIT_OTC_ORDER_URL,
                         paras);
             }
             catch (Exception e)

@@ -9,6 +9,15 @@
       "dependencies": {
         "Newtonsoft.Json": "1.0.0-*"
       }
+    },
+    "dnxcore50": {
+      "bin": {
+        "assembly": "../../src/OKCoinAPI/rest/bin/Release/rest.dll",
+        "pdb": "../../src/OKCoinAPI/rest/bin/Release/rest.pdb"
+      },
+      "dependencies": {
+        "Newtonsoft.Json": "1.0.0-*"
+      }
     }
   }
 }

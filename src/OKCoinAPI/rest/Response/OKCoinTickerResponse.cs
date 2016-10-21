@@ -14,8 +14,11 @@ namespace com.Response
         /// </summary>
         [JsonProperty(PropertyName = "date")]
         public string Date { get; set; }
-        //true代表成功返回
+        /// <summary>
+        /// true代表成功返回
+        /// </summary>
         [JsonProperty(PropertyName = "ticker")]
-        public string Ticker { get; set; }
+        public OKCoinTickerDetailResponse Ticker { get; set; }
+        
     }
 }

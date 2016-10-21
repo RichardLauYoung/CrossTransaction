@@ -68,6 +68,7 @@
     <Compile Include="Response\OKCoinBatchTradeOrderResponse.cs" />
     <Compile Include="Response\OKCoinBatchTradeResponse.cs" />
     <Compile Include="Response\OKCoinOTCOrderResponse.cs" />
+    <Compile Include="Response\OKCoinTickerDetailResponse.cs" />
     <Compile Include="Response\OKCoinTickerResponse.cs" />
     <Compile Include="Response\OKCoinTradeResponse.cs" />
     <Compile Include="Response\OKCoinWithdrawResponse.cs" />

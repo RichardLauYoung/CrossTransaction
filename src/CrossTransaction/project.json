@@ -40,7 +40,11 @@
         "rest": "1.0.0-*"
       }
     },
-    "dnxcore50": { }
+    "dnxcore50": {
+      "dependencies": {
+        "rest": "1.0.0-*"
+      }
+    }
   },
 
   "exclude": [

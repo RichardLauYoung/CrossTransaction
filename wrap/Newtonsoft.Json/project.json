@@ -8,7 +8,7 @@
     },
     "dnxcore50": {
       "bin": {
-        "assembly": "../../packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll"
+        "assembly": "../../src/OKCoinAPI/rest/bin/Release/Newtonsoft.Json.dll"
       }
     }
   }

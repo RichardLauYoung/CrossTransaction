@@ -9,7 +9,7 @@ namespace com.okcoin.rest.stock
     /// <summary>
     /// 现货行情，交易 REST API
     /// </summary>
-    interface IStockRestApi
+    public interface IStockRestApi
     {
         /// <summary>
         /// 行情
@@ -196,5 +196,13 @@ namespace com.okcoin.rest.stock
         /// <param name="since">从某一tid开始访问600条数据(必填项) </param>
         /// <returns></returns>
         String trade_history(String symbol, String since);
+        /// <summary>
+        /// 大宗交易下单
+        /// </summary>
+        /// <param name="type">buy: 买入, sell: 卖出</param>
+        /// <param name="amount">委托数量</param>
+        /// <param name="open_type">public: 公开交易, private: 私密交易</param>
+        /// <returns></returns>
+        String submit_otc_order(string symbol, string type, string amount, string price, string open_type);
     }
 }
