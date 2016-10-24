@@ -13,7 +13,7 @@
             <p><input type="text" value="" name="AmountRMB" id="AmountRMB" data-val="true" class="form-control"></p>
         </div>
         <div class="col-md-2">
-            <h2><a asp-controller="Home" asp-action="Exchange"><i class="icon-exchange icon-large"></i> </a></h2>
+            <h2><a href="javascript:void(0)" id="btnExchange"><i class="icon-exchange icon-large"></i> </a></h2>
         </div>
         <div class="col-md-4">
             <h2>USD</h2>
@@ -24,7 +24,7 @@
         <div class="form-group">
             <label for="CNKey" class="col-md-2 control-label">中国站Key</label>
             <div class="col-md-10">
-                <input type="text" value="" name="CNKey" id="CNKey" data-val-required="中国站Key 字段是必需的。" data-val="true" class="form-control">
+                <input type="text" value="568e271f-e541-4a50-8bd1-a1793325cbc6" name="CNKey" id="CNKey" data-val-required="中国站Key 字段是必需的。" data-val="true" class="form-control">
                 <span data-valmsg-replace="true" data-valmsg-for="CNKey" class="text-danger field-validation-valid"></span>
             </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="form-group">
             <label for="CNSecret" class="col-md-2 control-label">中国站Secret</label>
             <div class="col-md-10">
-                <input type="text" value="" name="CNSecret" id="CNSecret" data-val-required="中国站 Secret 字段是必需的。" data-val="true" class="form-control">
+                <input type="text" value="4015E70D4A0D18565382E5B51462948A" name="CNSecret" id="CNSecret" data-val-required="中国站 Secret 字段是必需的。" data-val="true" class="form-control">
                 <span data-valmsg-replace="true" data-valmsg-for="CNSecret" class="text-danger field-validation-valid"></span>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="form-group">
             <label for="InterKey" class="col-md-2 control-label">国际站Key</label>
             <div class="col-md-10">
-                <input type="text" value="" name="InterKey" id="InterKey" data-val-required="国际站Key 字段是必需的。" data-val="true" class="form-control">
+                <input type="text" value="2e03f3c0-8fa0-4660-8742-7558ea9519be" name="InterKey" id="InterKey" data-val-required="国际站Key 字段是必需的。" data-val="true" class="form-control">
                 <span data-valmsg-replace="true" data-valmsg-for="InterKey" class="text-danger field-validation-valid"></span>
             </div>
         </div>
@@ -49,7 +49,7 @@
         <div class="form-group">
             <label for="InterSecret" class="col-md-2 control-label">国际站Secret</label>
             <div class="col-md-10">
-                <input type="text" value="" name="InterSecret" id="InterSecret" data-val-required="国际站Secret 字段是必需的。" data-val="true" class="form-control">
+                <input type="text" value="2C5CB3CE1A3EC34ADC68B40D63FE2B7E" name="InterSecret" id="InterSecret" data-val-required="国际站Secret 字段是必需的。" data-val="true" class="form-control">
                 <span data-valmsg-replace="true" data-valmsg-for="InterSecret" class="text-danger field-validation-valid"></span>
             </div>
         </div>
@@ -58,7 +58,16 @@
     <div class="row">
         <div class="form-group">
             <div class="col-md-10">
-                <a asp-controller="Home" name="btnWithdraw" id="btnWithdraw" asp-action="Withdraw" class="btn-default" ><i class="icon-money icon-large"></i>提现</a>
+                <a asp-controller="Home" name="btnWithdraw" id="btnWithdraw" asp-action="Withdraw" class="btn-default" >提现<i class="icon-money icon-2x"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="BTCAddress" class="col-md-2 control-label">提现 Address</label>
+            <div class="col-md-10">
+                <input type="text" value="1CFDfFwguPaHZfjZy6XTwSvVjv5z77Q8Yi" name="BTCAddress" id="BTCAddress" data-val-required="BTCAddress" data-val="true" class="form-control">
+                <span data-valmsg-replace="true" data-valmsg-for="BTCAddress" class="text-danger field-validation-valid"></span>
             </div>
         </div>
     </div>

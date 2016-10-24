@@ -67,10 +67,17 @@
     <Compile Include="future\IFutureRestApi.cs" />
     <Compile Include="Response\OKCoinBatchTradeOrderResponse.cs" />
     <Compile Include="Response\OKCoinBatchTradeResponse.cs" />
+    <Compile Include="Response\OKCoinBorrowResponse.cs" />
+    <Compile Include="Response\OKCoinFreeResponse.cs" />
+    <Compile Include="Response\OKCoinFreezedResponse.cs" />
+    <Compile Include="Response\OKCoinFundsResponse.cs" />
     <Compile Include="Response\OKCoinOTCOrderResponse.cs" />
     <Compile Include="Response\OKCoinTickerDetailResponse.cs" />
     <Compile Include="Response\OKCoinTickerResponse.cs" />
     <Compile Include="Response\OKCoinTradeResponse.cs" />
+    <Compile Include="Response\OKCoinUnionFundResponse.cs" />
+    <Compile Include="Response\OKCoinUserInfoDetailResponse.cs" />
+    <Compile Include="Response\OKCoinUserInfoResponse.cs" />
     <Compile Include="Response\OKCoinWithdrawResponse.cs" />
     <Compile Include="rest\Eample.cs" />
     <Compile Include="rest\HttpUtilManager.cs" />

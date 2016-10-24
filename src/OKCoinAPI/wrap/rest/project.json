@@ -4,7 +4,7 @@
     "net45": {
       "wrappedProject": "../../rest/rest.csproj",
       "bin": {
-        "assembly": "../../rest/obj/{configuration}/rest.exe",
+        "assembly": "../../rest/obj/{configuration}/rest.dll",
         "pdb": "../../rest/obj/{configuration}/rest.pdb"
       },
       "dependencies": {
