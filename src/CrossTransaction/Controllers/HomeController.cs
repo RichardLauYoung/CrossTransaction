@@ -14,8 +14,6 @@ namespace CrossTransaction.Controllers
 {
     public class HomeController : Controller
     {
-        String cn_url = "https://www.okcoin.cn"; //国内站账号配置 为 https://www.okcoin.cn
-        String inter_url = "https://www.okcoin.com";
 
         public IActionResult Index()
         {

@@ -1,4 +1,4 @@
-﻿{
+{
   "webroot": "wwwroot",
   "userSecretsId": "aspnet5-CrossTransaction-d7b81138-da02-44d1-b02e-1182a410f74f",
   "version": "1.0.0-*",
@@ -37,6 +37,7 @@
   "frameworks": {
     "dnx451": {
       "dependencies": {
+        "ChnCharInfo": "1.0.0-*",
         "rest": "1.0.0-*"
       }
     }

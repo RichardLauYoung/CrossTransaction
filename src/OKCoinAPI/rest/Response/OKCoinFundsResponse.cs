@@ -10,19 +10,31 @@ namespace com.Response
     public class OKCoinFundsResponse
     {
         /// <summary>
+        /// 账户借款信息(只有在账户有借款信息时才会返回)
+        /// </summary>
+        [JsonProperty(PropertyName = "borrow")]
+        public OKCoinBorrowResponse Borrow { get; set; }
+        /// <summary>
+        /// 账户余额
+        /// </summary>
+        [JsonProperty(PropertyName = "free")]
+        public OKCoinFreeResponse Free { get; set; }
+        /// <summary>
+        /// 账户冻结余额
+        /// </summary>
+        [JsonProperty(PropertyName = "freezed")]
+        public OKCoinFreezedResponse Freezed { get; set; }
+        /// <summary>
+        /// 账户理财信息(只有在账户有理财信息时才返回)
+        /// </summary>
+        [JsonProperty(PropertyName = "union_fund")]
+        public OKCoinUnionFundResponse Union_fund { get; set; }
+
+        /// <summary>
         ///  账户资产
         /// </summary>
         [JsonProperty(PropertyName = "asset")]
-        public string Asset { get; set; }
-        /// <summary>
-        /// 网络
-        /// </summary>
-        [JsonProperty(PropertyName = "net")]
-        public string Net { get; set; }
-        /// <summary>
-        /// 总额
-        /// </summary>
-        [JsonProperty(PropertyName = "total")]
-        public string Total { get; set; }
+        public OKCoinAssetResponse Asset { get; set; }
+        
     }
 }

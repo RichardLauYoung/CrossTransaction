@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="future\FutureRestApiV1.cs" />
     <Compile Include="future\IFutureRestApi.cs" />
+    <Compile Include="Response\OKCoinAssetResponse.cs" />
     <Compile Include="Response\OKCoinBatchTradeOrderResponse.cs" />
     <Compile Include="Response\OKCoinBatchTradeResponse.cs" />
     <Compile Include="Response\OKCoinBorrowResponse.cs" />

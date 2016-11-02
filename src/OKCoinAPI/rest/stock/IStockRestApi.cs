@@ -66,7 +66,7 @@ namespace com.okcoin.rest.stock
         /// <param name="price">下单价格 [限价买单(必填)： 大于等于0，小于等于1000000 |  市价买单(必填)： BTC :最少买入0.01个BTC 的金额(金额>0.01*卖一价) / LTC :最少买入0.1个LTC 的金额(金额>0.1*卖一价)]</param>
         /// <param name="amount"> 交易数量 [限价卖单（必填）：BTC 数量大于等于0.01 / LTC 数量大于等于0.1 | 市价卖单（必填）： BTC :最少卖出数量大于等于0.01 / LTC :最少卖出数量大于等于0.1]</param>
         /// <returns></returns>
-        String trade(String symbol, String type, String price, String amount);
+        String trade(String symbol, String type, String price="", String amount="");
         /// <summary>
         /// 批量下单
         /// </summary>

@@ -373,7 +373,7 @@ namespace com.okcoin.rest.stock
         /// <param name="amount"> 交易数量 [限价卖单（必填）：BTC 数量大于等于0.01 / LTC 数量大于等于0.1 | 市价卖单（必填）： BTC :最少卖出数量大于等于0.01 / LTC :最少卖出数量大于等于0.1]</param>
         /// <returns></returns>
         public String trade(String symbol, String type,
-                String price, String amount)
+                String price = "", String amount = "")
         {
             String result = "";
             try

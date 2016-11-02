@@ -30,6 +30,7 @@ namespace CrossTransaction
             }
 
             builder.AddEnvironmentVariables();
+            
             Configuration = builder.Build();
         }
 
@@ -43,7 +44,7 @@ namespace CrossTransaction
                 .AddSqlServer()
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
-
+            
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
