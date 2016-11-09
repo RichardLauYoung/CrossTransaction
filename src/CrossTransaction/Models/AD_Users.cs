@@ -4,21 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace CrossTransaction.Models
 {
-    public class AD_Users
+    [Table("AD_USERS")]
+    public class AD_Users: IdentityUser
     {
         /// <summary>
         /// Primary Key automatic increase
         /// </summary>
         [Key]
         public int UserID { get; set; }
-        /// <summary>
-        /// User nickname
-        /// </summary>
-        [StringLength(50)]
-        public string UserName { get; set; }
         /// <summary>
         /// User password
         /// </summary>
@@ -48,11 +45,6 @@ namespace CrossTransaction.Models
         /// User tele phone number
         /// </summary>
         public string Tel { get; set; }
-        /// <summary>
-        /// Email
-        /// </summary>
-        [StringLength(50)]
-        public string Email { get; set; }
         /// <summary>
         /// User type normal user or company 
         /// </summary>

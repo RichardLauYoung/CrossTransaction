@@ -10,7 +10,7 @@ using CrossTransaction.Models;
 
 namespace CrossTransaction.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(CrossDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

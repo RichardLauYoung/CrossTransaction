@@ -42,11 +42,11 @@ namespace CrossTransaction
             // Add framework services.
             services.AddEntityFramework()
                 .AddSqlServer()
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<CrossDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<AD_Users, IdentityRole>()
+                .AddEntityFrameworkStores<CrossDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
@@ -78,7 +78,7 @@ namespace CrossTransaction
                     using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
                         .CreateScope())
                     {
-                        serviceScope.ServiceProvider.GetService<ApplicationDbContext>()
+                        serviceScope.ServiceProvider.GetService<CrossDbContext>()
                              .Database.Migrate();
                     }
                 }
