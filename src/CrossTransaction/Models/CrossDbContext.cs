@@ -7,8 +7,11 @@ using Microsoft.Data.Entity;
 
 namespace CrossTransaction.Models
 {
-    public class CrossDbContext : IdentityDbContext<UserAccount>
+    public partial class CrossDbContext : DbContext
     {
+        public virtual DbSet<UserAccount> UserAccounts { get; set; }
+        public virtual DbSet<BankAccount> BankAccounts { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
