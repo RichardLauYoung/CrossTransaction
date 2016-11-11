@@ -16,15 +16,15 @@ namespace CrossTransaction.Controllers
     [Authorize]
     public class ManageController : Controller
     {
-        private readonly UserManager<AD_Users> _userManager;
-        private readonly SignInManager<AD_Users> _signInManager;
+        private readonly UserManager<UserAccount> _userManager;
+        private readonly SignInManager<UserAccount> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
 
         public ManageController(
-        UserManager<AD_Users> userManager,
-        SignInManager<AD_Users> signInManager,
+        UserManager<UserAccount> userManager,
+        SignInManager<UserAccount> signInManager,
         IEmailSender emailSender,
         ISmsSender smsSender,
         ILoggerFactory loggerFactory)
@@ -338,7 +338,7 @@ namespace CrossTransaction.Controllers
             Error
         }
 
-        private async Task<AD_Users> GetCurrentUserAsync()
+        private async Task<UserAccount> GetCurrentUserAsync()
         {
             return await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
         }

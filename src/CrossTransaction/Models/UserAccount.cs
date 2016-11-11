@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 namespace CrossTransaction.Models
 {
     [Table("AD_USERS")]
-    public class AD_Users: IdentityUser
+    public class UserAccount: IdentityUser
     {
         /// <summary>
         /// Primary Key automatic increase
@@ -25,17 +25,7 @@ namespace CrossTransaction.Models
         /// Name
         /// </summary>
         [StringLength(100)]
-        public string FirstName { get; set; }
-        /// <summary>
-        /// Mid name
-        /// </summary>
-        [StringLength(100)]
-        public string MidName { get; set; }
-        /// <summary>
-        /// Family name
-        /// </summary>
-        [StringLength(100)]
-        public string LastName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// User cell phone number
         /// </summary>
@@ -50,6 +40,20 @@ namespace CrossTransaction.Models
         /// </summary>
         [StringLength(3)]
         public string UserType { get; set; }
+        /// <summary>
+        /// User birthday
+        /// </summary>
+        [StringLength(10)]
+        public string Birthday { get; set; }
+        /// <summary>
+        /// Identity number
+        /// </summary>
+        [StringLength(30)]
+        public string IdentityNo { get; set; }
+        /// <summary>
+        /// Country code
+        /// </summary>
+        public string CountryCode { get; set; }
 
     }
 }

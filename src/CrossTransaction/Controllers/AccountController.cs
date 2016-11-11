@@ -18,15 +18,15 @@ namespace CrossTransaction.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly UserManager<AD_Users> _userManager;
-        private readonly SignInManager<AD_Users> _signInManager;
+        private readonly UserManager<UserAccount> _userManager;
+        private readonly SignInManager<UserAccount> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
 
         public AccountController(
-            UserManager<AD_Users> userManager,
-            SignInManager<AD_Users> signInManager,
+            UserManager<UserAccount> userManager,
+            SignInManager<UserAccount> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
             ILoggerFactory loggerFactory)
@@ -104,7 +104,7 @@ namespace CrossTransaction.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new AD_Users { UserName = model.Email, Email = model.Email };
+                var user = new UserAccount { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -206,7 +206,7 @@ namespace CrossTransaction.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new AD_Users { UserName = model.Email, Email = model.Email };
+                var user = new UserAccount { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -445,7 +445,7 @@ namespace CrossTransaction.Controllers
             }
         }
 
-        private async Task<AD_Users> GetCurrentUserAsync()
+        private async Task<UserAccount> GetCurrentUserAsync()
         {
             return await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
         }

@@ -45,7 +45,7 @@ namespace CrossTransaction
                 .AddDbContext<CrossDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             
-            services.AddIdentity<AD_Users, IdentityRole>()
+            services.AddIdentity<UserAccount, IdentityRole>()
                 .AddEntityFrameworkStores<CrossDbContext>()
                 .AddDefaultTokenProviders();
 

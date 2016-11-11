@@ -7,7 +7,7 @@ using Microsoft.Data.Entity;
 
 namespace CrossTransaction.Models
 {
-    public class CrossDbContext : IdentityDbContext<AD_Users>
+    public class CrossDbContext : IdentityDbContext<UserAccount>
     {
         protected override void OnModelCreating(ModelBuilder builder)
         {
